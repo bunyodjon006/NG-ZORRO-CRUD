@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import {NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb'
 import { NzMenuModule } from 'ng-zorro-antd/menu';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { NzMenuModule } from 'ng-zorro-antd/menu';
     NzIconModule,
     NzBreadCrumbModule,
     NzMenuModule,
+    HttpClientModule
     
 
     
