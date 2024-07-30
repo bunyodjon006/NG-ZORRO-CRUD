@@ -27,7 +27,8 @@
     text-align: center;
   }
   .ant-layout {
-    height: 100vh;
+    min-height: 100vh;
+    height: auto
   }
   .anticon-menu-fold {
     margin: 20px;

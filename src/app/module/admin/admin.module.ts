@@ -11,11 +11,13 @@ import { NzIconModule } from 'ng-zorro-antd/icon';
 import {NzBreadCrumbModule} from 'ng-zorro-antd/breadcrumb'
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { HttpClientModule } from '@angular/common/http';
+import { UsersComponent } from './users/users.component';
 
 
 @NgModule({
   declarations: [
     AdminComponent,
+    UsersComponent
    
   ],
   imports: [
@@ -26,6 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     NzBreadCrumbModule,
     NzMenuModule,
     HttpClientModule
+    
     
 
     

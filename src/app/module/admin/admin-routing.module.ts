@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin.component';
+import { UsersComponent } from './users/users.component';
 
 
 const routes: Routes = [
@@ -12,9 +13,25 @@ const routes: Routes = [
         path:'teacher',
         loadChildren:()=>import('./teacher/teacher.module').then((m) => m.TeacherModule),
        
+      } ,
+      {
+        path:'user',
+        loadChildren:()=>import('./users/users.module').then((m)=>m.UsersModule)
+
       }
+      
      ]
   },
+  // {
+  //   path:'users',component:UsersComponent,
+  //   children:[
+  //     {
+  //       path:'user',
+  //       loadChildren:()=>import('./users/users.module').then((m)=>m.UsersModule)
+
+  //     }
+  //   ]
+  // }
  
 
 ];

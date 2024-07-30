@@ -1,1 +1,32 @@
-<p>add-edit-teacher works!</p>
+<h1><span routerLink="../" class="arrow-left" nz-icon nzType="arrow-left" nzTheme="outline"></span> Add teacher</h1>
+<form nz-form [formGroup]="teacherform">
+    <nz-form-item>
+      <nz-form-label [nzSpan]="6" nzFor="name">Name</nz-form-label>
+      <nz-form-control [nzSpan]="30">
+        <input formControlName="name" nz-input name="name" type="name" id="name" />
+      
+      </nz-form-control>
+    </nz-form-item>
+    <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="age">Age</nz-form-label>
+        <nz-form-control [nzSpan]="30">
+          <input formControlName="age" nz-input name="age" type="text" id="age" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="addrees">Addrees</nz-form-label>
+        <nz-form-control [nzSpan]="30">
+          <input formControlName="addrees" nz-input name="addrees" type="text" id="addrees" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSpan]="6" nzFor="key">Key</nz-form-label>
+        <nz-form-control [nzSpan]="30">
+          <input formControlName="key" nz-input name="key" type="text" id="key" />
+        </nz-form-control>
+      </nz-form-item>
+      <nz-button-group>
+        <button nz-button nzType="primary" >Clear</button>
+        <button nz-button nzDanger  nzType="primary" (click)="add()">Add</button>
+      </nz-button-group>
+  </form>
