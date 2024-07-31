@@ -1,14 +1,14 @@
 export interface TeachersResponse {
-    // postId:number;
+      id:number;
     name:string;
-    age:string;
+    age:number;
     addrees:string;
-    key:string; 
+    key:number; 
 }
 export interface TeachersRequest {
-// postId:number;
+   
      name:string;
-     age:string;
+     age:number;
      addrees:string;
-     key:string;
+     key:number;
 }

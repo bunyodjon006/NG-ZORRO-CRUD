@@ -19,4 +19,10 @@ export class TeachersService {
   return this.http.post<TeachersResponse>(this.apiUrl,model)
  }
 
+ edit(id:number,model:TeachersRequest):Observable<TeachersResponse[]>{
+  return this.http.put<TeachersResponse[]>(`${this.apiUrl}/${id}`,model)
+ }
+getById(id:number){
+  return this.http.get<TeachersResponse>(`${this.apiUrl}/${id}`)
+}
 }

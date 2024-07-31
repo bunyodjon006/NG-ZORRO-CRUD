@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TeachersService } from '../services/teachers.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { TeachersResponse } from '../models/teachers.model';
 import { id_ID } from 'ng-zorro-antd/i18n';
@@ -20,7 +20,9 @@ export class TeacherListComponent implements OnInit {
   
 
 
-  constructor(private $teachers:TeachersService){
+  constructor(private $teachers:TeachersService , private router:Router,
+    private route:ActivatedRoute
+  ){
 
   }
 
@@ -43,10 +45,15 @@ this.teachers=response;
        XLSX.writeFile(wb,'UserList.xlsx');
     }
 
- 
+//   edit(id:number){
+
+// this.router.navigate(['edit',id],  {relativeTo:this.route}
+// )
+//   }
 
 }
-function exportToExcel() {
-  throw new Error('Function not implemented.');
-}
+
+
+
+
 

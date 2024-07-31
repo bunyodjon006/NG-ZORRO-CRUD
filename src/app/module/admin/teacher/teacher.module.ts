@@ -14,6 +14,7 @@ import { NzFormPatchModule } from 'ng-zorro-antd/core/form';
 import { NzFormModule} from 'ng-zorro-antd/form'
 import {NzInputModule} from 'ng-zorro-antd/input'
 import { NzMessageModule } from 'ng-zorro-antd/message';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ ReactiveFormsModule,
 NzFormPatchModule,
 NzFormModule,
 NzInputModule,
-NzMessageModule
+NzMessageModule,
+HttpClientModule
 
 
   ]
