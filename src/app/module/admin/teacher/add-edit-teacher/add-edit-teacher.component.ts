@@ -37,7 +37,7 @@ this.setFormValues(teacher);
 }
 }
 
-private setFormValues(model:TeachersResponse){
+ setFormValues(model:TeachersResponse){
   this.teacherform.controls.name.setValue(model.name);
 this.teacherform.controls.age.setValue(model.age)
 this.teacherform.controls.addrees.setValue(model.addrees)

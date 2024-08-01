@@ -7,7 +7,7 @@ import { TeachersRequest, TeachersResponse } from '../models/teachers.model';
   providedIn: 'root'
 })
 export class TeachersService {
-  apiUrl="http://localhost:8081/api/v2/teacher";
+ public  apiUrl="http://localhost:8081/api/v2/teacher";
 
   
   constructor(private http:HttpClient) { }
@@ -19,8 +19,8 @@ export class TeachersService {
   return this.http.post<TeachersResponse>(this.apiUrl,model)
  }
 
- edit(id:number,model:TeachersRequest):Observable<TeachersResponse[]>{
-  return this.http.put<TeachersResponse[]>(`${this.apiUrl}/${id}`,model)
+ edit(id:number,model:TeachersRequest):Observable<TeachersResponse>{
+  return this.http.put<TeachersResponse>(`${this.apiUrl}/${id}`,model)
  }
 getById(id:number){
   return this.http.get<TeachersResponse>(`${this.apiUrl}/${id}`)
