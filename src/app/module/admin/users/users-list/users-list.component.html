@@ -1,4 +1,5 @@
 <button  class="mb-1" nz-button nzType="primary">Add</button>
+<button (click)="exportToExcel()" nz-button  nzType="primary" ><span nz-icon nzType="diff" nzTheme="outline"></span></button>
 <nz-table #basicTable [nzData]="users">
     <thead>
       <tr>
@@ -6,7 +7,7 @@
         <th>PhoneNumber</th>
         <th>Telegram Username</th>
     <th>Action</th>
-    <th><nz-button-group><button (click)="exportToExcel()" nz-button  nzType="primary" ><span nz-icon nzType="diff" nzTheme="outline"></span></button></nz-button-group></th>
+ 
       </tr>
     </thead>
     <tbody>

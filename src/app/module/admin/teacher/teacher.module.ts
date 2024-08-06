@@ -9,12 +9,13 @@ import {NzDividerModule} from 'ng-zorro-antd/divider'
 import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NzFormPatchModule } from 'ng-zorro-antd/core/form';
 import { NzFormModule} from 'ng-zorro-antd/form'
 import {NzInputModule} from 'ng-zorro-antd/input'
 import { NzMessageModule } from 'ng-zorro-antd/message';
 import { HttpClientModule, HttpResponse } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -34,7 +35,7 @@ NzFormModule,
 NzInputModule,
 NzMessageModule,
 HttpClientModule,
-
+FormsModule,
 
 
   ]

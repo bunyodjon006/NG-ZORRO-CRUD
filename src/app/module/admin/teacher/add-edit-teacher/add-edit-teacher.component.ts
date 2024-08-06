@@ -67,17 +67,7 @@ submit() {
     });
   } else if (this.teacherform.valid) {
     const request = this.teacherform.getRawValue();
-    if(this.isEdit){
-      this.$teacher.edit(this.id,request).subscribe((teacher)=>{
-        if(teacher){
-          this.router.navigate(['../'],{
-            relativeTo:this.route
-          
-          })
-          return;
-        }
-      })
-  }
+    
   this.$teacher.add(request).subscribe((teacher) => {
     if(teacher){
 this.router.navigate(['../'],{
@@ -97,5 +87,18 @@ this.message.success("Backendga Muvaffaqiyatli qo'shildi", {
 reset(){
   this.teacherform.reset()
 }
-
+edit(){
+  const request = this.teacherform.getRawValue();
+  if(this.isEdit){
+    this.$teacher.edit(this.id,request).subscribe((teacher)=>{
+      if(teacher){
+        this.router.navigate(['../../'],{
+          relativeTo:this.route
+        
+        })
+        return;
+      }
+    })
+}
+}
 }

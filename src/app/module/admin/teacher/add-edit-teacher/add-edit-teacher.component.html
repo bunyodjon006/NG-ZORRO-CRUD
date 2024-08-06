@@ -1,4 +1,4 @@
-<h1><span [routerLink]="['../']" class="arrow-left" nz-icon nzType="arrow-left" nzTheme="outline">
+<h1><span [routerLink]="[isEdit ?'../../':'../']" class="arrow-left" nz-icon nzType="arrow-left" nzTheme="outline">
  
 </span> {{isEdit ? 'Edit teacher':'Add teacher'}} </h1>
 <form nz-form [formGroup]="teacherform">
@@ -28,6 +28,7 @@
       </nz-form-item>
       <nz-button-group>
         <button nz-button nzType="primary"  >Clear</button>
-        <button nz-button nzDanger  nzType="primary" (click)="submit()">{{isEdit ? 'Edit':'Add'}}</button>
+        <button nz-button nzDanger  nzType="primary" (click)="submit()">Add</button>
+      <button nz-button nzDanger  nzType="primary" (click)="edit()">Edit</button>
       </nz-button-group>
   </form>

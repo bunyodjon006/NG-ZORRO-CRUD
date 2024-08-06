@@ -1,6 +1,6 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, throwError } from 'rxjs';
 import { TeachersRequest, TeachersResponse } from '../models/teachers.model';
 
 @Injectable({
@@ -22,7 +22,15 @@ export class TeachersService {
  edit(id:number,model:TeachersRequest):Observable<TeachersResponse>{
   return this.http.put<TeachersResponse>(`${this.apiUrl}/${id}`,model)
  }
-getById(id:number){
+getById(id:number):Observable<TeachersResponse>{
   return this.http.get<TeachersResponse>(`${this.apiUrl}/${id}`)
+}
+delete(id:number):Observable<any>{
+  return this.http.delete<any>(`${this.apiUrl}/${id}`)
+}
+
+private handleError(error: HttpErrorResponse) {
+  console.error('Xato yuz berdi:', error);
+  return throwError('Xatolik yuz berdi, qayta urinib ko\'ring.');
 }
 }

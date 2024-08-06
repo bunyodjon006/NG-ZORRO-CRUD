@@ -6,8 +6,7 @@ export interface TeachersResponse {
     key:number; 
 }
 export interface TeachersRequest {
-   
-     name:string;
+   name:string;
      age:number;
      addrees:string;
      key:number;

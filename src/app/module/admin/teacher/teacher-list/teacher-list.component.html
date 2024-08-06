@@ -1,5 +1,11 @@
 <button routerLink="add"  class="mb-1" nz-button nzType="primary">Add</button>
 <button (click)="exportToExcel()" nz-button  nzType="primary" ><span nz-icon nzType="diff" nzTheme="outline"></span></button>
+ <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+      <input [(ngModel)]="filterteacher" type="text" nz-input placeholder="input search text" />
+    </nz-input-group>
+    <ng-template #suffixIconButton>
+      <button nz-button nzType="primary" nzSearch (click)="onSearch()"><span nz-icon nzType="search"></span></button>
+    </ng-template>
 <nz-table #basicTable [nzData]="teachers">
     <thead>
       <tr>
@@ -12,7 +18,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let teachers of basicTable.data; let i=index">
+      <tr *ngFor="let teachers of basicTable.data ">
         <td> {{ teachers.id}}</td>
         <td>{{teachers.name}}</td>
         <td>{{teachers.age}}</td>
@@ -25,7 +31,7 @@
           <a>Delete</a> -->
           <nz-button-group>
             <button nz-button [routerLink]="['edit',teachers.id]"  nzType="primary" ><span nz-icon nzType="edit" ></span></button>
-            <button nz-button nzDanger  nzType="primary"><span nz-icon nzType="delete"></span> </button>
+            <button  nz-button nzDanger (click)="delete(teachers.id)"  nzType="primary"><span nz-icon nzType="delete"></span> </button>
           </nz-button-group>
         </td>
       </tr>
